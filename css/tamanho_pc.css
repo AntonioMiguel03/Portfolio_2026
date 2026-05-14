@@ -1,0 +1,304 @@
+@charset "utf-8";
+
+/* Desktop (min-width: 830px) */
+
+.logo p {
+  font-size: clamp(1.1rem, 1.5vw, 1.65rem);
+  white-space: nowrap;
+}
+
+nav {
+  background: linear-gradient(
+    90deg,
+    #0e1f36 0%,
+    #152a45 35%,
+    #0c1929 70%,
+    #081018 100%
+  );
+}
+
+nav .openMenu {
+  display: none;
+}
+
+nav .mainMenu .closeMenu {
+  display: none;
+}
+
+nav .mainMenu {
+  width: auto;
+  flex: 1;
+  height: auto;
+  position: relative;
+  margin-right: 2rem;
+  margin-top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background: none;
+  color: inherit;
+  transition: none;
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  gap: 0.25rem;
+}
+
+nav ul li {
+  text-align: center;
+  width: auto;
+  font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+  padding: 0 0.35rem;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 0.5rem 0.85rem;
+  width: auto;
+  white-space: nowrap;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+nav ul li a:hover,
+nav .mainMenu li a:hover {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+nav .mainMenu {
+  display: flex;
+  list-style: none;
+}
+
+#google_translate_element {
+  position: absolute;
+  top: 8px;
+  right: clamp(56px, 5vw, 80px);
+}
+
+/* Sobre: bloco centrado no ecrã; imagem à esquerda com texto à volta; parágrafo justificado */
+.pt1 #sobre {
+  display: flow-root;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/*foto espelhada da esquerda*/
+.fEsquerda {
+  float: left;
+  width: 200px;
+  height: 300px;
+  margin-left: 5px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border-radius: 5%;
+  background-image: url("../img/IMG_20180803_181554046.jpg");
+  background-repeat: no-repeat;
+  background-size: 250px 310px;
+  background-position-x: 290px;
+  background-position-y: 60px;
+  background-attachment: fixed;
+  background-color: #000000;
+}
+
+.pt1 #sobre p {
+  max-width: none;
+  margin-top: -30px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: justify;
+}
+
+.esp {
+  height: auto;
+  min-height: 300px;
+  width: 30%;
+  min-width: 220px;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.especialidades-grid {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.linhaEsp {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+/* Trabalhos: galeria como no layout original */
+#trabs {
+  margin-top: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: none;
+}
+
+#trabs .linhaEsp {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  gap: clamp(0.5rem, 1.5vw, 1.25rem);
+}
+
+#trabs .image {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding: 7px;
+  margin-left: 0;
+  flex: 0 1 30%;
+  max-width: 33%;
+  min-width: 0;
+  width: auto;
+}
+
+#trabs .linhaEsp:first-of-type .image span {
+  margin-left: 17%;
+  margin-right: auto;
+  display: table;
+  width: 70%;
+  padding: 10px;
+}
+
+#trabs .linhaEsp:last-of-type .image span {
+  margin-left: 40%;
+  margin-right: auto;
+  display: block;
+  width: 85%;
+  max-width: 360px;
+  padding: 10px;
+}
+
+#trabs .image img {
+  height: auto;
+  width: 100%;
+  vertical-align: middle;
+}
+
+#trabs .image img:hover {
+  filter: grayscale(0%);
+}
+
+.pt4 p {
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
+}
+
+#myBtn {
+  background: linear-gradient(135deg, #2d5a9e 0%, #1a3d72 100%);
+}
+
+#myBtn:hover {
+  background: var(--accent, #4d8cff);
+  color: #fff;
+}
+
+#btnTrab {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnTrabLinha {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.btTrabLinha {
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+}
+
+.dvCont {
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 900px;
+}
+
+#contato img {
+  width: 48px;
+  height: auto;
+}
+
+#contato h2 {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-size: 2em;
+  text-align: center;
+  color: var(--text, #e8eef7);
+}
+
+#contato .dscCNT {
+  text-align: center;
+}
+
+#contato p {
+  text-align: center;
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+}
+
+#contato p a {
+  color: var(--accent-soft, #6ea8ff);
+  text-decoration: none;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+}
+
+#contato p a:hover {
+  color: #fff;
+}
+
+#contato .zapzap {
+  width: 44px;
+  height: auto;
+}
+
+#contato .gmail {
+  margin-right: 0;
+}
+
+#contato .txtGmail {
+  margin-left: 0;
+}

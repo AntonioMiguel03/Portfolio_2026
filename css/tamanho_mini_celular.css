@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+/* Telas muito estreitas (max-width: 300px) */
+
+nav {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #0e1f36 0%, #0a1526 100%);
+  opacity: inherit;
+  min-height: 140px;
+  padding: 0.35rem 0.5rem;
+}
+
+nav .openMenu {
+  display: block;
+  position: absolute;
+  top: 52px;
+  right: 14px;
+}
+
+nav ul {
+  font-size: 0.8rem;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+nav ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 0;
+  width: 100%;
+  text-decoration: none;
+  color: #e8eef7;
+}
+
+#google_translate_element {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  z-index: 5;
+}
+
+nav .mainMenu {
+  z-index: 10;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+}
