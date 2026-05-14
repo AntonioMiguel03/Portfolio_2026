@@ -108,9 +108,12 @@ nav .mainMenu {
   border-radius: 5%;
   background-image: url("../img/IMG_20180803_181554046.jpg");
   background-repeat: no-repeat;
-  background-size: 250px 310px;
+  /*background-size: 250px 310px;
   background-position-x: 290px;
-  background-position-y: 60px;
+  background-position-y: 60px;*/
+  background-size: 15% 40%;
+  background-position-x: 23%;
+  background-position-y: 10%;
   background-attachment: fixed;
   background-color: #000000;
 }
