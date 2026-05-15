@@ -144,8 +144,32 @@ function topFunction() {
 }
 
 
-//caso comente o codigo abaixo, a imagem da <section> sobre vai ficar estatica(sem o efeito de scroll)
+/*caso queira quea imagem da <section> sobre fique estatica(sem o efeito de scroll), comente todo o codigo abaixo, depois
+  na pasta CSS, nos arquivos styles.css e tamanho_pc.css, ache em ambos os arquivos a classe .fEsquerda, nela descomente a
+  propriedade abaixo:
+     /Para habilitar a imagem estatica/ (o / significa que la esta como um comentario)
+     /background-image: url("../img/IMG_20180803_181554046.jpg");/
+    Feita esta alteracao em ambos os arquivos de CSS, salve e pronto a imagem vai ficar estatica
+*/
 //script do paralax no modo desktop
+function aplicarImagem() {
+  const elemento = document.querySelector(".fEsquerda");
+
+  if (elemento) {
+    elemento.style.backgroundImage = 'url("./img/IMG_20180803_181554046.jpg")';
+  }
+}
+
+// Executa quando abrir normalmente
+window.addEventListener("load", aplicarImagem);
+
+// Executa imediatamente caso o DOM já esteja carregado
+if (
+  document.readyState === "complete" ||
+  document.readyState === "interactive"
+) {
+  aplicarImagem();
+}
 function ajustarParallax() {
   // 1. Elementos fixos buscados APENAS UMA VEZ (melhora performance de scroll)
   const el = document.querySelector(".fEsquerda");
