@@ -373,7 +373,8 @@ nav .mainMenu .closeMenu {
   background-image: url("../img/IMG_20180803_181554046.jpg");
   background-size: 210px 300px;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
+  background-attachment: scroll;
   background-position-y: 1px;
   background-position-y: 45px;
   background-position-x: center;
