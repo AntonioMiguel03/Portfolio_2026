@@ -145,7 +145,7 @@ function topFunction() {
 
 
 //script do paralax no modo desktop
-function ajustarParallax() {
+/*function ajustarParallax() {
   function onScroll() {
     const el = document.querySelector(".fEsquerda");
     const sobre = document.querySelector("#sobre");
@@ -174,4 +174,4 @@ function ajustarParallax() {
 }
 
 window.addEventListener("load", ajustarParallax);
-window.addEventListener("resize", ajustarParallax);
+window.addEventListener("resize", ajustarParallax);*/
