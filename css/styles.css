@@ -370,7 +370,8 @@ nav .mainMenu .closeMenu {
 }
 
 .fEsquerda {
-  background-image: url("../img/IMG_20180803_181554046.jpg");
+  /*Para habilitar a imagem estatica*/
+  /*background-image: url("../img/IMG_20180803_181554046.jpg");*/
   background-size: 210px 300px;
   background-repeat: no-repeat;
   /*background-attachment: fixed;*/
