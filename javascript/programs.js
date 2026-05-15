@@ -147,28 +147,26 @@ function topFunction() {
 //script do paralax no modo desktop
 function ajustarParallax() {
   function onScroll() {
-    if (window.innerWidth >= 830) {
-      const el = document.querySelector(".fEsquerda");
-      const sobre = document.querySelector("#sobre");
+    const el = document.querySelector(".fEsquerda");
+    const sobre = document.querySelector("#sobre");
 
-      if (!el || !sobre) return;
-      const scrollY = window.pageYOffset;
-      const sectionTop = sobre.offsetTop;
-      const sectionHeight = sobre.offsetHeight;
+    if (!el || !sobre) return;
+    const scrollY = window.pageYOffset;
+    const sectionTop = sobre.offsetTop;
+    const sectionHeight = sobre.offsetHeight;
 
-      // verifica se está dentro da área da seção (inclui subida e descida)
-      const dentroDaSecao =
-        scrollY + window.innerHeight > sectionTop &&
-        scrollY < sectionTop + sectionHeight;
+    // verifica se está dentro da área da seção (inclui subida e descida)
+    const dentroDaSecao =
+      scrollY + window.innerHeight > sectionTop &&
+      scrollY < sectionTop + sectionHeight;
 
-      if (dentroDaSecao) {
-        // posição relativa REAL dentro da seção (bidirecional)
-        const relativeScroll = scrollY - sectionTop;
+    if (dentroDaSecao) {
+      // posição relativa REAL dentro da seção (bidirecional)
+      const relativeScroll = scrollY - sectionTop;
 
-        const movimentoY = relativeScroll * -0.5;
+      const movimentoY = relativeScroll * -0.5;
 
-        el.style.backgroundPositionY = `${movimentoY}px`;
-      }
+      el.style.backgroundPositionY = `${movimentoY}px`;
     }
   }
 
