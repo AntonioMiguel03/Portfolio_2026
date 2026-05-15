@@ -144,34 +144,47 @@ function topFunction() {
 }
 
 
+//caso comente o codigo abaixo, a imagem da <section> sobre vai ficar estatica(sem o efeito de scroll)
 //script do paralax no modo desktop
-/*function ajustarParallax() {
-  function onScroll() {
-    const el = document.querySelector(".fEsquerda");
-    const sobre = document.querySelector("#sobre");
+function ajustarParallax() {
+  // 1. Elementos fixos buscados APENAS UMA VEZ (melhora performance de scroll)
+  const el = document.querySelector(".fEsquerda");
+  const sobre = document.querySelector("#sobre");
+  const inicio = document.documentElement;
 
-    if (!el || !sobre) return;
-    const scrollY = window.pageYOffset;
+  if (!el || !sobre || !inicio) return;
+
+  // 2. Verifica a rota IMEDIATAMENTE ao carregar a página
+  const seletorDaUrl = window.location.hash;
+
+  // Se estiver no index.html (sem hash), joga a imagem para baixo no início
+  if (!seletorDaUrl) {
+    el.style.backgroundPositionY = "100%"; // Ou valor em px, ex: "200px"
+  }
+
+  function onScroll() {
+    const scrollY = window.pageYOffset || window.scrollY;
     const sectionTop = sobre.offsetTop;
     const sectionHeight = sobre.offsetHeight;
 
-    // verifica se está dentro da área da seção (inclui subida e descida)
+    // Verifica se está dentro da área da seção
     const dentroDaSecao =
       scrollY + window.innerHeight > sectionTop &&
       scrollY < sectionTop + sectionHeight;
 
     if (dentroDaSecao) {
-      // posição relativa REAL dentro da seção (bidirecional)
+      // Posição relativa REAL dentro da seção
       const relativeScroll = scrollY - sectionTop;
-
       const movimentoY = relativeScroll * -0.5;
 
       el.style.backgroundPositionY = `${movimentoY}px`;
     }
   }
 
+  // Executa uma vez no carregamento para aplicar o estado inicial e ativa o listener
+  onScroll();
   window.addEventListener("scroll", onScroll);
 }
 
 window.addEventListener("load", ajustarParallax);
-window.addEventListener("resize", ajustarParallax);*/
+window.addEventListener("resize", ajustarParallax);
