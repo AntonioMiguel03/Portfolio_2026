@@ -151,7 +151,7 @@ function topFunction() {
      /background-image: url("../img/IMG_20180803_181554046.jpg");/
     Feita esta alteracao em ambos os arquivos de CSS, salve e pronto a imagem vai ficar estatica
 */
-//script do paralax no modo desktop
+//script do paralax(efeito de scroll)
 function aplicarImagem() {
   const elemento = document.querySelector(".fEsquerda");
 
