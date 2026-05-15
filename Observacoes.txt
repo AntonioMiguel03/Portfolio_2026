@@ -1,0 +1,1 @@
+Caso queira habilitar o efeito de paralax/scroll, vá no script do JavaScript programs.js, e na parte que está comentado sobre o efeito do paralax(o ultimo efeito) descomenta o código e pronto
